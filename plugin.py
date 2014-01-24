@@ -55,6 +55,8 @@ class Steamy(callbacks.Plugin):
         self.group._update()
 
     def np(self, irc, msg, args):
+        """Return a list of a people currently in-game on Steam
+        """
         key = self.registryValue('apikey')
         if not key:
             irc.replyError('plugins.steamy.apikey has not been set')

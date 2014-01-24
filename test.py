@@ -29,9 +29,15 @@
 ###
 
 from supybot.test import *
+import os
 
 class SteamyTestCase(PluginTestCase):
     plugins = ('Steamy',)
+    config = {'plugins.steamy.apikey': os.environ['STEAM_API_KEY']}
+    if network:
+        def testCommand(self):
+            assertNotError('np')
 
+    
 
 # vim:set shiftwidth=4 tabstop=4 expandtab textwidth=79:
