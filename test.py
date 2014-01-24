@@ -36,7 +36,7 @@ class SteamyTestCase(PluginTestCase):
     config = {'plugins.steamy.apikey': os.environ['STEAM_API_KEY']}
     if network:
         def testCommand(self):
-            assertNotError('np')
+            self.assertNotError('np')
 
     
 
