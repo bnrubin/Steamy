@@ -1,0 +1,14 @@
+language: python
+python:
+- '2.7'
+- '3.2'
+- '3.3'
+- pypy
+install:
+- pip install https://github.com/ProgVal/Limnoria/archive/master.zip lxml
+script:
+- echo $TRAVIS_PYTHON_VERSION
+- cd .. && supybot-test Steamy
+env:
+  global:
+    secure: EvamR8nhYvgRf4UWPPP6cwTNwEPra4Sexsvo1kTKeGtPfE/qFhZqme06NsE6OgvWxPb7lknwcQYYMdGiI9BBNgRO13iENOnX7Xi+IqbXt7Th9L5bDBwQ2AnIs5lcoghtYP+hYDAza9+KgK/BzNZKS4arDJtewBXd3YBVrReSXZk=
